@@ -7,20 +7,18 @@ const study = lab.util.fromObject({
     {
       "type": "lab.plugins.Metadata",
       "path": undefined
+    },
+    {
+      "type": "lab.plugins.Download",
+      "filePrefix": "evaluation-de-messages-de-preventions",
+      "path": undefined
     }
   ],
   "metadata": {
-    "title": "",
+    "title": "Évaluation de messages de préventions",
     "description": "",
     "repository": "",
-    "contributors": ""
-  },
-  "messageHandlers": {
-    "epilogue": function anonymous(
-) {
-var resultJson = study.options.datastore.exportJson();
-jatos.submitResultData(resultJson, jatos.startNextComponent);
-}
+    "contributors": "Magali Bringuier \u003Cmagali.bringuier@univ-tlse2.fr\u003E"
   },
   "files": {},
   "responses": {},
@@ -31,7 +29,7 @@ jatos.submitResultData(resultJson, jatos.startNextComponent);
         {
           "type": "text",
           "title": "consentement libre et éclairé - Évaluation de la plausibilité et de la valeur communicationnelle des messages de prévention dans les jeux de hasard et d’argent",
-          "content": "\u003Cp\u003E \u003Cb\u003E Chercheur titulaire responsable scientifique du projet : \u003C\u002Fb\u003E\u003C\u002Fp\u003E\n\u003Cp\u003EValérie Le Floch, Professeure à l’Université Toulouse Jean Jaurès, laboratoire CNRS CLLE (Cognition, Langues, Langage et Ergonomie).\nE-mail : valerie.le-floch@univ-tlse2.fr\u003C\u002Fp\u003E\n\n\u003Cb\u003E But du projet de recherche, confidentialité et respect de la vie privée : \u003C\u002Fb\u003E\n\u003Cp style=\"text-align: justify;\"\u003ECe projet de recherche a pour objectif d’évaluer le caractère plausible et la valeur communicationnelle de messages de prévention utilisés par les opérateurs de jeux de hasard et d’argent en France. En acceptant de participer à cette étude, vous serez amené.e à départager un ensemble de messages de prévention sur la base du ou des critères indiqués. Vous disposez du temps que vous souhaitez pour répondre à cette étude. La participation à cette étude est volontaire et totalement anonyme, de ce fait, votre participation n’a absolument rien d’obligatoire. Vous pouvez stopper votre participation à tout moment sans avoir à vous justifier ni encourir aucune responsabilité. Votre consentement ne décharge pas les organisateurs de la recherche de leurs responsabilités et vous conservez tous vos droits garantis par la loi.\u003C\u002Fp\u003E\n\n\u003Cp style=\"text-align: justify;\"\u003EAu cours de cette expérience, vous acceptez que vos réponses soient enregistrées. \u003Cb\u003E \u003Cu\u003E Vous comprenez que les informations recueillies sont strictement confidentielles et à usage exclusif des investigateurs concernés. L’adresse IP de votre ordinateur ne sera pas enregistrée et les données sociodémographiques que nous récolterons ne permettront pas de vous identifier, même par recoupement d’informations.\u003C\u002Fu\u003E \u003C\u002Fb\u003E \u003C\u002Fp\u003E\n\n\u003Cp style=\"text-align: justify;\"\u003EDe plus, la présentation des données de cette expérience durant des colloques ou des publications scientifiques sera faite de telle sorte qu'il ne sera pas possible d'identifier les participants. Vous acceptez que les données enregistrées à l’occasion de cette étude puissent être conservées pendant 10 ans dans une base de données et faire l’objet d’un traitement informatisé non nominatif. Vous pourrez prendre connaissance des résultats généraux de la présente étude, en contactant le responsable scientifique de l’étude.\u003C\u002Fp\u003E\n\n\u003Cp style=\"text-align: justify;\"\u003EÀ notre connaissance, cette recherche n’implique \u003Cb\u003E aucun risque \u003C\u002Fb\u003E ou \u003Cb\u003Einconfort\u003C\u002Fb\u003E autre que ceux de la vie quotidienne.\u003C\u002Fp\u003E\n\n\u003Cp style=\"text-align: justify;\"\u003EEn signant le formulaire de consentement, \u003Cb\u003Evous certifiez que vous avez lu et compris les renseignements ci-dessus, et qu’on vous a avisé que vous étiez libre d’annuler votre consentement ou de vous retirer de cette recherche, sans aucun préjudice. \u003C\u002Fb\u003ENéanmoins, une fois que vous aurez validé le questionnaire, \u003Cb\u003Eil ne sera plus possible de vous retirer de cette recherche,\u003C\u002Fb\u003E car nous n’aurons aucune donnée identifiante, pas même votre adresse IP, identifiant la localisation de votre connexion.\u003C\u002Fp\u003E\n\n\n"
+          "content": "\u003Cp\u003E \u003Cb\u003E Chercheur titulaire responsable scientifique du projet : \u003C\u002Fb\u003E\u003C\u002Fp\u003E\n\u003Cp\u003EValérie Le Floch, Professeure à l’Université Toulouse Jean Jaurès, laboratoire CNRS CLLE (Cognition, Langues, Langage et Ergonomie).\nE-mail : valerie.le-floch@univ-tlse2.fr\u003C\u002Fp\u003E\n\n\u003Cb\u003E But du projet de recherche, confidentialité et respect de la vie privée : \u003C\u002Fb\u003E\n\u003Cp style=\"text-align: justify;\"\u003ECe projet de recherche a pour objectif d’évaluer le caractère plausible et la valeur communicationnelle de messages de prévention utilisés par les opérateurs de jeux de hasard et d’argent en France. En acceptant de participer à cette étude, vous serez amené.e à départager un ensemble de messages de prévention sur la base du ou des critères indiqués. Vous disposez du temps que vous souhaitez pour répondre à cette étude. La participation à cette étude est volontaire et totalement anonyme, de ce fait, votre participation n’a absolument rien d’obligatoire. Vous pouvez stopper votre participation à tout moment sans avoir à vous justifier ni encourir aucune responsabilité. Votre consentement ne décharge pas les organisateurs de la recherche de leurs responsabilités et vous conservez tous vos droits garantis par la loi.\u003C\u002Fp\u003E\n\n\u003Cp style=\"text-align: justify;\"\u003EAu cours de cette expérience, vous acceptez que vos réponses soient enregistrées. \u003Cb\u003E \u003Cu\u003E Vous comprenez que les informations recueillies sont strictement confidentielles et à usage exclusif des investigateurs concernés. L’adresse IP de votre ordinateur ne sera pas enregistrée et les données sociodémographiques que nous récolterons ne permettront pas de vous identifier, même par recoupement d’informations.\u003C\u002Fu\u003E \u003C\u002Fb\u003E \u003C\u002Fp\u003E\n\n\u003Cp style=\"text-align: justify;\"\u003EDe plus, la présentation des données de cette expérience durant des colloques ou des publications scientifiques sera faite de telle sorte qu'il ne sera pas possible d'identifier les participants. Vous acceptez que les données enregistrées à l’occasion de cette étude puissent être conservées pendant 10 ans dans une base de données et faire l’objet d’un traitement informatisé non nominatif. Vous pourrez prendre connaissance des résultats généraux de la présente étude, en contactant le responsable scientifique de l’étude.\u003C\u002Fp\u003E\n\n\u003Cp style=\"text-align: justify;\"\u003EÀ notre connaissance, cette recherche n’implique \u003Cb\u003E aucun risque \u003C\u002Fb\u003E ou \u003Cb\u003Einconfort\u003C\u002Fb\u003E autre que ceux de la vie quotidienne.\u003C\u002Fp\u003E\n\n\u003Cp style=\"text-align: justify;\"\u003EEn signant le formulaire de consentement, \u003Cb\u003Evous certifiez que vous avez lu et compris les renseignements ci-dessus, et qu’on vous a avisé que vous étiez libre d’annuler votre consentement ou de vous retirer de cette recherche, sans aucun préjudice. \u003C\u002Fb\u003ENéanmoins, une fois que vous aurez validé le questionnaire, \u003Cb\u003Eil ne sera plus possible de vous retirer de cette recherche,\u003C\u002Fb\u003E car nous n’aurons aucune donnée identifiante, pas même votre adresse IP, identifiant la localisation de votre connexion.\u003C\u002Fp\u003E\n\n\n\n\n"
         },
         {
           "required": true,
@@ -41,16 +39,18 @@ jatos.submitResultData(resultJson, jatos.startNextComponent);
         }
       ],
       "scrollTop": true,
-      "submitButtonText": "Continue →",
+      "submitButtonText": "\u003Cspan\u003EParticipate!\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E",
       "submitButtonPosition": "hidden",
-      "files": {},
+      "files": {
+        "1200px-UCLouvain_logo.svg.png": "embedded\u002F46df0cfe82a9eddeeda548c38c09b46672314ac4726462f71150d92083c4e0c7.png"
+      },
       "responses": {
         "": ""
       },
       "parameters": {},
       "messageHandlers": {},
-      "title": "consentement",
-      "width": "l"
+      "title": "consent",
+      "width": "m"
     },
     {
       "type": "lab.html.Page",
@@ -69,7 +69,7 @@ jatos.submitResultData(resultJson, jatos.startNextComponent);
       },
       "parameters": {},
       "messageHandlers": {},
-      "title": "si_consent_no",
+      "title": "if_consent_non",
       "tardy": true,
       "skip": "${this.state.consent!=0}"
     },
@@ -81,9 +81,8 @@ jatos.submitResultData(resultJson, jatos.startNextComponent);
       },
       "parameters": {},
       "messageHandlers": {},
-      "title": "si_consent_oui",
+      "title": "if_consent_oui",
       "tardy": true,
-      "skip": "${this.state.consent!= 1}",
       "content": [
         {
           "type": "lab.html.Page",
@@ -91,12 +90,12 @@ jatos.submitResultData(resultJson, jatos.startNextComponent);
             {
               "type": "text",
               "title": "Consignes",
-              "content": "\u003Cp\u003EDans cette étude, vous allez voir un ensemble de messages concernant les jeux de hasard et d'argent. Ces messages seront affichés individuellement.\u003C\u002Fp\u003E\n\n\u003Cp\u003EPour chaque message, vous devrez indiquer à quel point vous le trouvez préventif, c'est-à-dire à quel point il vous dissuade de jouer à des jeux de hasard et d'argent.\u003C\u002Fp\u003E\n\n\u003Cp\u003EVous devrez ensuite indiquer à quel point vous le trouvez promotionnel, c'est-à-dire à quel point il vous incite à jouer.\u003C\u002Fp\u003E\n\n\u003Cp\u003EUne fois vos deux réponses données sur un message, vous pourrez appuyer sur \"Continue →\" pour passer au message suivant.\u003C\u002Fp\u003E\n\n\u003Cp\u003EAssurez-vous d'avoir bien compris ces consignes, et commencez la tâche en cliquant sur \"Commencer la tâche\".\u003C\u002Fp\u003E"
+              "content": "\u003Cp\u003EDans cette étude, vous allez voir un ensemble de messages concernant les jeux de hasard et d'argent. Ces messages seront affichés individuellement.\u003C\u002Fp\u003E\n\n\u003Cp\u003EPour chaque message, vous devrez indiquer à quel point vous le trouvez préventif, c'est-à-dire à quel point il vous dissuade de jouer à des jeux de hasard et d'argent.\u003C\u002Fp\u003E\n\n\u003Cp\u003EVous devrez ensuite indiquer à quel point vous le trouvez promotionnel, c'est-à-dire à quel point il vous incite à jouer.\u003C\u002Fp\u003E\n\n\u003Cp\u003EUne fois vos deux réponses données sur un message, vous pourrez appuyer sur \"Suivant\" pour passer au message suivant.\u003C\u002Fp\u003E\n\n\u003Cp\u003EAssurez-vous d'avoir bien compris ces consignes, et commencez la tâche en cliquant sur \"Commencer la tâche\".\u003C\u002Fp\u003E"
             },
             {
               "required": true,
               "type": "html",
-              "content": "\u003Cbr\u003E\u003Cbr\u003E\r\n\u003Ccenter\u003E\r\n  \u003Cdiv\u003E\u003Cbutton\u003ECommencer la tâche\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\r\n\u003C\u002Fcenter\u003E",
+              "content": "\u003Cbr\u003E\u003Cbr\u003E\r\n\u003Ccenter\u003E\r\n  \u003Cdiv\u003E\u003Cbutton\u003ECommencer la tâche\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\r\n\u003C\u002Fcenter\u003E\r\n",
               "name": ""
             }
           ],
@@ -213,7 +212,8 @@ jatos.submitResultData(resultJson, jatos.startNextComponent);
           "parameters": {},
           "messageHandlers": {},
           "title": "jugement",
-          "indexParameter": "compteur_message",
+          "tardy": true,
+          "indexParameter": "count_message",
           "shuffleGroups": [],
           "template": {
             "type": "lab.html.Page",
@@ -221,32 +221,150 @@ jatos.submitResultData(resultJson, jatos.startNextComponent);
               {
                 "required": true,
                 "type": "html",
-                "content": "\u003Cp align=\"right\" style=\"color:grey\"\u003E\u003Ci\u003EMessage : ${this.parameters.compteur_message+1}\u002F22\u003C\u002Fi\u003E\u003C\u002Fp\u003E\u003Cbr\u003E\r\n\u003Ccenter\u003E\u003Cfont size =\"5\"\u003E${ parameters.messages }\u003C\u002Ffont\u003E\u003C\u002Fcenter\u003E\u003Cbr\u003E\u003Chr\u003E\u003Cbr\u003E\u003Cbr\u003E\r\n\u003Ch3\u003ESelon vous, à quel point ce message est-il préventif ?\u003C\u002Fh3\u003E\r\n\u003Cbr\u003E\u003Cbr\u003E",
-                "name": ""
-              },
-              {
-                "required": true,
-                "type": "html",
-                "content": "\u003Cform id=\"jugement_prev\"\u003E\r\n  \u003Clabel\u003EPas du tout préventif\u003C\u002Flabel\u003E\r\n  \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"1\" onclick=\"document.getElementById('jugement_promotion').style.visibility='visible';\"\u003E\r\n  \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"2\" onclick=\"document.getElementById('jugement_promotion').style.visibility='visible';\"\u003E\r\n  \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"3\" onclick=\"document.getElementById('jugement_promotion').style.visibility='visible';\"\u003E\r\n  \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"4\" onclick=\"document.getElementById('jugement_promotion').style.visibility='visible';\"\u003E\r\n  \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"5\" onclick=\"document.getElementById('jugement_promotion').style.visibility='visible';\"\u003E\r\n  \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"6\" onclick=\"document.getElementById('jugement_promotion').style.visibility='visible';\"\u003E\r\n  \u003Clabel\u003ETout à fait préventif\u003C\u002Flabel\u003E\u003Cbr\u003E\r\n\u003C\u002Fform\u003E\r\n\r\n\u003Cform id=\"jugement_promotion\" style=\"visibility:hidden;\" \u003E\r\n  \u003Clabel\u003EPas du tout promotionnel\u003C\u002Flabel\u003E\r\n  \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"1\" required \u003E\r\n  \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"2\" \u003E\r\n  \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"3\" \u003E\r\n  \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"4\" \u003E\r\n  \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"5\" \u003E\r\n  \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"6\" \u003E\r\n  \u003Clabel\u003ETout à fait préventif\u003C\u002Flabel\u003E\u003Cbr\u003E\r\n\u003C\u002Fform\u003E",
+                "content": "\u003Cp align=\"right\" style=\"color:grey\"\u003E\u003Ci\u003EMessage : ${this.parameters.count_message+1}\u002F22\u003C\u002Fi\u003E\u003C\u002Fp\u003E\u003Cbr\u003E\r\n\r\n\u003Cdiv style=\"font-size: 1.5vw;width:100%\"\u003E\r\n\u003C\u002Fdiv\u003E\r\n\r\n \u003Ccenter\u003E\u003CFONT size =\"5\"\u003E${ parameters.messages }\u003C\u002FFONT\u003E\u003C\u002Fcenter\u003E\u003Cbr\u003E\u003Chr\u003E\u003Cbr\u003E\u003Cbr\u003E\r\n\u003Ch3\u003ESelon vous, à quel point ce message est-il préventif ?\u003C\u002Fh3\u003E\r\n\u003Cbr\u003E\u003Cbr\u003E\r\n\r\n\u003Cstyle\u003E\r\nhtml,body {padding:0;margin:0;}\r\n.wrap {\r\n}\r\nform .statement {\r\n  display:block;\r\n  font-size: 1.5rem;\r\n  padding: 20px 0 0 4.25%;\r\n  margin-bottom:10px;\r\n}\r\nform .likert {\r\n  list-style:none;\r\n  width:100%;\r\n  margin:0;\r\n  padding:0 0 0;\r\n  display:block;\r\n  border-bottom:2px solid #efefef;\r\n}\r\nform .likert:before {\r\n  content: '';\r\n  position:relative;\r\n  top:11px;\r\n  display:block;\r\n  background-color:#efefef;\r\n  height:0px;\r\n  width:80%;\r\n}\r\nform .likert li {\r\n  display:inline-block;\r\n  width:15%;\r\n  text-align:center;\r\n  vertical-align: top;\r\n}\r\nform .likert li input[type=radio] {\r\n  display:block;\r\n  position:relative;\r\n  top:0;\r\n  left:50%;\r\n  margin-left:-4px;\r\n}\r\n\u003C\u002Fstyle\u003E\r\n\u003Cdiv class=\"wrap\" id=\"jugement_prevention\"\u003E\r\n  \u003Ccenter\u003E\r\n  \u003Cform action=\"\"\u003E\r\n    \u003Cul class='likert'\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"1\" onclick=\"document.getElementById('jugement_promotion').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003EPas du tout préventif\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"2\" onclick=\"document.getElementById('jugement_promotion').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003E\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"3\" onclick=\"document.getElementById('jugement_promotion').style.visibility='visible';\"\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"4\" onclick=\"document.getElementById('jugement_promotion').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003E\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n            \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"5\" onclick=\"document.getElementById('jugement_promotion').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003E\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n            \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"6\" onclick=\"document.getElementById('jugement_promotion').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003ETout à fait préventif\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n    \u003C\u002Ful\u003E\r\n  \u003C\u002Fform\u003E\r\n  \u003C\u002Fcenter\u003E\r\n\u003C\u002Fdiv\u003E\r\n\u003Cbr\u003E\r\n\u003Cdiv class=\"wrap\" id=\"jugement_promotion\" style=\"visibility:hidden;\"\u003E\r\n  \u003Ccenter\u003E\r\n    \u003Ch3\u003ESelon vous, à quel point ce message est-il promotionnel ?\u003C\u002Fh3\u003E\r\n\u003Cbr\u003E\u003Cbr\u003E\r\n  \u003Cform action=\"\"\u003E\r\n    \u003Cul class='likert'\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"1\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003EPas du tout promotionnel\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"2\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003E\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"3\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"4\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003E\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"5\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003E\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"6\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003ETout à fait promotionnel\u003C\u002Flabel\u003E\r\n        \u003C\u002Fli\u003E\r\n    \u003C\u002Ful\u003E\r\n  \u003C\u002Fform\u003E\r\n  \u003C\u002Fcenter\u003E\r\n\u003C\u002Fdiv\u003E\r\n\u003Cbr\u003E\r\n \u003Ccenter\u003E\r\n  \u003Cdiv id=\"continue_button\" style=\"visibility:hidden;\"\u003E\u003Cbutton type=\"submit\" \u003Esuivant\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\r\n\u003C\u002Fcenter\u003E",
                 "name": ""
               }
             ],
             "scrollTop": true,
             "submitButtonText": "Continue →",
-            "submitButtonPosition": "right",
+            "submitButtonPosition": "hidden",
             "files": {},
             "responses": {
               "": ""
             },
             "parameters": {},
             "messageHandlers": {},
-            "title": "jugement_message"
+            "title": "jugement_messages",
+            "width": "m"
           }
+        },
+        {
+          "type": "lab.html.Page",
+          "items": [
+            {
+              "type": "text",
+              "title": "Quelques informations vous concernant",
+              "content": "\u003Cp\u003EVeuillez cliquer sur \"Continuer →\" pour répondre à quelques questions vous concernant.\u003C\u002Fp\u003E \n\n\u003Cp\u003EPour rappel, l'entièreté de cette étude est anonyme. \u003C\u002Fp\u003E\n\u003Cp\u003E\u003Cb\u003EAucune information que nous récolterons sur vous ne permet de vous identifier, même par recoupement.\u003C\u002Fb\u003E\u003C\u002Fp\u003E "
+            },
+            {
+              "required": true,
+              "type": "html",
+              "content": "\u003Cbr\u003E\u003Cbr\u003E\r\n\u003Ccenter\u003E\r\n  \u003Cdiv\u003E\u003Cbutton\u003EContinuer →\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\r\n\u003C\u002Fcenter\u003E\r\n",
+              "name": ""
+            }
+          ],
+          "scrollTop": true,
+          "submitButtonText": "Continuer →",
+          "submitButtonPosition": "hidden",
+          "files": {},
+          "responses": {
+            "": ""
+          },
+          "parameters": {},
+          "messageHandlers": {},
+          "title": "Questionnaire socio démographique "
+        },
+        {
+          "type": "lab.html.Page",
+          "scrollTop": true,
+          "submitButtonText": "\u003Cspan\u003EPour continuer, cliquer ici\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E",
+          "submitButtonPosition": "hidden",
+          "files": {},
+          "responses": {
+            "": ""
+          },
+          "parameters": {},
+          "messageHandlers": {},
+          "title": "genre",
+          "width": "m",
+          "items": [
+            {
+              "type": "text",
+              "title": "Quel est votre genre ?",
+              "content": ""
+            },
+            {
+              "required": true,
+              "type": "html",
+              "content": "\u003Cbr\u003E\r\n\r\n\u003Cform\u003E\r\n  \u003Cinput type=\"radio\" id=\"homme\" name=\"genre\" value=\"1\" required\u003E\r\n  \u003Clabel for=\"homme\"\u003EHomme\u003C\u002Flabel\u003E\u003Cbr\u003E\r\n\r\n  \u003Cinput type=\"radio\" id=\"femme\" name=\"genre\" value=\"2\" required\u003E\r\n  \u003Clabel for=\"femme\"\u003EFemme\u003C\u002Flabel\u003E\u003Cbr\u003E\r\n\r\n  \u003Cinput type=\"radio\" id=\"autre\" name=\"genre\" value=\"0\"\u003E\r\n  \u003Clabel for=\"genre\"\u003EAutre\u003C\u002Flabel\u003E\u003Cbr\u003E\r\n  \r\n  \u003Cinput type=\"radio\" id=\"ne_souhaite_pas_repondre\" name=\"genre\" value=\"3\" required\u003E\r\n  \u003Clabel for=\"ne_souhaite_pas_repondre\"\u003ENe souhaite pas repondre\u003C\u002Flabel\u003E\u003Cbr\u003E\r\n  \r\n\r\n\u003C\u002Fform\u003E\r\n\r\n\u003Cbr\u003E\u003Cbr\u003E\r\n\u003Ccenter\u003E\r\n  \u003Cdiv\u003E\u003Cbutton\u003EContinuer →\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\r\n\u003C\u002Fcenter\u003E\r\n",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "type": "lab.html.Page",
+          "scrollTop": true,
+          "submitButtonText": "\u003Cspan\u003EPour continuer, cliquer ici\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E",
+          "submitButtonPosition": "hidden",
+          "files": {},
+          "responses": {
+            "": ""
+          },
+          "parameters": {},
+          "messageHandlers": {},
+          "title": "age",
+          "width": "m",
+          "items": [
+            {
+              "type": "text",
+              "title": "Quel est votre âge?",
+              "content": "Veuillez indiquer votre âge (en année seulement). Vous pouvez utiliser les flèches présentes à droite de l'encart, ou rentrer directement votre âge à l'aide de votre clavier."
+            },
+            {
+              "required": true,
+              "type": "html",
+              "content": "\u003Cbr\u003E\r\n\r\n\u003Cform\u003E\r\n\u003Cbody\u003E\r\n\r\n\u003Clabel for=\"age\"\u003EÂge (en année) :\u003C\u002Flabel\u003E\r\n\u003Cinput type=\"number\" id=\"age\" name=\"age\" min=\"18\"\u003E\r\n\r\n\u003C\u002Fbody\u003E\r\n\u003C\u002Fform\u003E\r\n\r\n\u003Cbr\u003E\u003Cbr\u003E\r\n\u003Ccenter\u003E\r\n  \u003Cdiv\u003E\u003Cbutton\u003EContinuer →\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\r\n\u003C\u002Fcenter\u003E\r\n",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "type": "lab.html.Screen",
+          "files": {},
+          "responses": {
+            "keypress(Space)": "end_study"
+          },
+          "parameters": {},
+          "messageHandlers": {
+            "before:prepare": function anonymous(
+) {
+function randomID(){
+  const length = 10;
+  let result = "";
+  const chars = "0123456789abcdefghjklmnopqrstuvwxyz";
+  for (let i = 0; i < length; i++) {
+    result += chars[Math.floor(Math.random() * chars.length)];
+  }
+  return result;
+}
+
+const filename = `${randomID()}-data.json`
+
+const dataJSON = study.internals.controller.datastore.exportJson();
+
+fetch("https://pipe.jspsych.org/api/data/", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "*/*",
+  },
+  body: JSON.stringify({
+    experimentID: "XaOAL7eRrHcT",
+    filename: filename,
+    data: dataJSON,
+  }),
+});
+}
+          },
+          "title": "end_study_redirect",
+          "content": " \u003Cmain class=\"content-vertical-center\r\n             content-horizontal-center\"\u003E\r\n \u003Cdiv style=\"font-size: 1.2vw; width: 70%;\"\u003E  \r\n\u003Cp style=\"text-align: justify;\"\u003EDernière question\u003C\u002Fp\u003E\r\n\r\n\u003Cp style=\"text-align: justify;\"\u003EVous avez terminé le questionnaire. L'entièreté de cette étude est anonyme et aucune des données recueillies ne permet de vous identifier. \u003C\u002Fp\u003E\r\n  \r\n\r\n \u003C\u002Fdiv\u003E\r\n  \u003C\u002Fmain\u003E",
+          "tardy": true
         }
-      ]
+      ],
+      "skip": "${this.state.consent!= 1}"
     }
   ]
 })
 
 // Let's go!
-jatos.onLoad(() => study.run())
+study.run()

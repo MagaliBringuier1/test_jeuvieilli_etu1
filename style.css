@@ -1,1 +1,96 @@
-/* Please define your custom styles here */
+body {
+  background-color: rgb(255, 255, 255);
+  color:black;
+}
+
+div.container {
+  background-color: rgb(255, 255, 255);
+  border-width: 0px;
+  color: black;
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+  }
+}
+
+fieldset label {
+ font-weight: normal;
+ background-color:rgb(255, 255, 255);
+ color:black; 
+ padding: .1em;
+ float:left;
+ //border: 1px solid grey;
+ text-align: center;
+ line-height: 0px;
+ }
+ 
+fieldset span 
+{text-align: center;}
+fieldset span input { display: none;}
+.w-m {
+  max-width: calc(3 * var(--width-min-container));
+}
+
+fieldset {
+  border:none;
+}
+hr{
+    border:0;
+    margin:2;
+    width:75%;
+    height:2px;
+    background:black;
+}
+
+
+//.container {
+   // position: relative;
+   // width: 200px; /* Largeur du conteneur */
+   // height: 100px; /* Hauteur du conteneur */
+  //}
+
+  //input[type="range"] {
+    //position: relative;
+    //width: 100%; /* Largeur du curseur */
+    //height: 200%; /* Hauteur du curseur */
+    //margin: 100;
+    //padding: 0;
+  //}
+
+  //.label-left {
+   // position: absolute;
+   // left: 0;
+   // top: 50%;
+   // transform: translateY(-50%);
+   // text-align: left;
+   // width: 100px; /* Largeur des labels */
+  //}
+
+  //.label-right {
+   // position: absolute;
+   // right: 0;
+   // top: 50%;
+   // transform: translateY(-50%);
+   // text-align: right;
+   // width: 50px; /* Largeur des labels */
+  //}
+
+/* Use a serif font for the headers,
+   and add a bottom border to h1 elements */
+h1, h2, h3 {
+  text-align: left;
+ color:black;
+}
+h1 {
+  text-align: left;
+  border-bottom: 1px dotted :black(255, 255, 255, 0.13);
+  padding-bottom: 0.8rem;
+}
+
+footer#footer {
+ background-color: black;
+ background: black;
+}
+#nextbuttondiv {padding-top:10px;text-align:center}
+#bouton_suivant::before {content: 'Suivant'}
