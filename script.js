@@ -48,7 +48,12 @@ const study = lab.util.fromObject({
         "": ""
       },
       "parameters": {},
-      "messageHandlers": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+this.parameters.contrebal_set = this.random.choice(['prev', 'prom'])
+}
+      },
       "title": "consent",
       "width": "m"
     },
@@ -211,9 +216,10 @@ const study = lab.util.fromObject({
           },
           "parameters": {},
           "messageHandlers": {},
-          "title": "jugement",
+          "title": "jugement_prev",
           "tardy": true,
           "indexParameter": "count_message",
+          "skip": "${this.state.contrebal_set != 'prev'}",
           "shuffleGroups": [],
           "template": {
             "type": "lab.html.Page",
@@ -221,7 +227,7 @@ const study = lab.util.fromObject({
               {
                 "required": true,
                 "type": "html",
-                "content": "\u003Cp align=\"right\" style=\"color:grey\"\u003E\u003Ci\u003EMessage : ${this.parameters.count_message+1}\u002F22\u003C\u002Fi\u003E\u003C\u002Fp\u003E\u003Cbr\u003E\r\n\r\n\u003Cdiv style=\"font-size: 1.5vw;width:100%\"\u003E\r\n\u003C\u002Fdiv\u003E\r\n\r\n \u003Ccenter\u003E\u003CFONT size =\"5\"\u003E${ parameters.messages }\u003C\u002FFONT\u003E\u003C\u002Fcenter\u003E\u003Cbr\u003E\u003Chr\u003E\u003Cbr\u003E\u003Cbr\u003E\r\n\u003Ch3\u003ESelon vous, à quel point ce message est-il préventif ?\u003C\u002Fh3\u003E\r\n\u003Cbr\u003E\u003Cbr\u003E\r\n\r\n\u003Cstyle\u003E\r\nhtml,body {padding:0;margin:0;}\r\n.wrap {\r\n}\r\nform .statement {\r\n  display:block;\r\n  font-size: 1.5rem;\r\n  padding: 20px 0 0 4.25%;\r\n  margin-bottom:10px;\r\n}\r\nform .likert {\r\n  list-style:none;\r\n  width:100%;\r\n  margin:0;\r\n  padding:0 0 0;\r\n  display:block;\r\n  border-bottom:2px solid #efefef;\r\n}\r\nform .likert:before {\r\n  content: '';\r\n  position:relative;\r\n  top:11px;\r\n  display:block;\r\n  background-color:#efefef;\r\n  height:0px;\r\n  width:80%;\r\n}\r\nform .likert li {\r\n  display:inline-block;\r\n  width:15%;\r\n  text-align:center;\r\n  vertical-align: top;\r\n}\r\nform .likert li input[type=radio] {\r\n  display:block;\r\n  position:relative;\r\n  top:0;\r\n  left:50%;\r\n  margin-left:-4px;\r\n}\r\n\u003C\u002Fstyle\u003E\r\n\u003Cdiv class=\"wrap\" id=\"jugement_prevention\"\u003E\r\n  \u003Ccenter\u003E\r\n  \u003Cform action=\"\"\u003E\r\n    \u003Cul class='likert'\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"1\" onclick=\"document.getElementById('jugement_promotion').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003EPas du tout préventif\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"2\" onclick=\"document.getElementById('jugement_promotion').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003E\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"3\" onclick=\"document.getElementById('jugement_promotion').style.visibility='visible';\"\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"4\" onclick=\"document.getElementById('jugement_promotion').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003E\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n            \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"5\" onclick=\"document.getElementById('jugement_promotion').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003E\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n            \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"6\" onclick=\"document.getElementById('jugement_promotion').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003ETout à fait préventif\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n    \u003C\u002Ful\u003E\r\n  \u003C\u002Fform\u003E\r\n  \u003C\u002Fcenter\u003E\r\n\u003C\u002Fdiv\u003E\r\n\u003Cbr\u003E\r\n\u003Cdiv class=\"wrap\" id=\"jugement_promotion\" style=\"visibility:hidden;\"\u003E\r\n  \u003Ccenter\u003E\r\n    \u003Ch3\u003ESelon vous, à quel point ce message est-il promotionnel ?\u003C\u002Fh3\u003E\r\n\u003Cbr\u003E\u003Cbr\u003E\r\n  \u003Cform action=\"\"\u003E\r\n    \u003Cul class='likert'\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"1\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003EPas du tout promotionnel\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"2\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003E\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"3\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"4\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003E\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"5\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003E\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"6\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003ETout à fait promotionnel\u003C\u002Flabel\u003E\r\n        \u003C\u002Fli\u003E\r\n    \u003C\u002Ful\u003E\r\n  \u003C\u002Fform\u003E\r\n  \u003C\u002Fcenter\u003E\r\n\u003C\u002Fdiv\u003E\r\n\u003Cbr\u003E\r\n \u003Ccenter\u003E\r\n  \u003Cdiv id=\"continue_button\" style=\"visibility:hidden;\"\u003E\u003Cbutton type=\"submit\" \u003Esuivant\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\r\n\u003C\u002Fcenter\u003E",
+                "content": "\u003Cp align=\"right\" style=\"color:grey\"\u003E\u003Ci\u003EMessage : ${this.parameters.count_message+1}\u002F22\u003C\u002Fi\u003E\u003C\u002Fp\u003E\u003Cbr\u003E\r\n\r\n\u003Cdiv style=\"font-size: 1.5vw;width:100%\"\u003E\r\n\u003C\u002Fdiv\u003E\r\n\r\n \u003Ccenter\u003E\u003CFONT size =\"5\"\u003E${ parameters.messages }\u003C\u002FFONT\u003E\u003C\u002Fcenter\u003E\u003Cbr\u003E\u003Chr\u003E\u003Cbr\u003E\r\n \u003Ch3\u003ESelon vous, à quel point ce message est-il préventif ?\u003C\u002Fh3\u003E\r\n\u003Cbr\u003E\u003Cbr\u003E\r\n\r\n\u003Cstyle\u003E\r\nhtml,body {padding:0;margin:0;}\r\n.wrap {\r\n}\r\nform .statement {\r\n  display:block;\r\n  font-size: 1.5rem;\r\n  padding: 20px 0 0 4.25%;\r\n  margin-bottom:10px;\r\n}\r\nform .likert {\r\n  list-style:none;\r\n  width:100%;\r\n  margin:0;\r\n  padding:0 0 0;\r\n  display:block;\r\n  border-bottom:2px solid #efefef;\r\n}\r\nform .likert:before {\r\n  content: '';\r\n  position:relative;\r\n  top:11px;\r\n  display:block;\r\n  background-color:#efefef;\r\n  height:0px;\r\n  width:80%;\r\n}\r\nform .likert li {\r\n  display:inline-block;\r\n  width:15%;\r\n  text-align:center;\r\n  vertical-align: top;\r\n}\r\nform .likert li input[type=radio] {\r\n  display:block;\r\n  position:relative;\r\n  top:0;\r\n  left:50%;\r\n  margin-left:-4px;\r\n}\r\n\u003C\u002Fstyle\u003E\r\n\u003Cdiv class=\"wrap\"\u003E\r\n  \u003Ccenter\u003E\r\n  \u003Cform action=\"\"\u003E\r\n    \u003Cul class='likert'\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"1\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003EPas du tout préventif\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"2\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003E\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"3\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"4\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003E\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n            \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"5\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003E\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n            \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_prevention\" value=\"6\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003ETout à fait préventif\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n    \u003C\u002Ful\u003E\r\n  \u003C\u002Fform\u003E\r\n  \u003C\u002Fcenter\u003E\r\n\u003C\u002Fdiv\u003E\r\n\u003Cbr\u003E\r\n\r\n\u003Ccenter\u003E\r\n  \u003Cdiv id=\"continue_button\" style=\"visibility:hidden;\"\u003E\u003Cbutton type=\"submit\" \u003Esuivant\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\r\n\u003C\u002Fcenter\u003E",
                 "name": ""
               }
             ],
@@ -234,10 +240,150 @@ const study = lab.util.fromObject({
             },
             "parameters": {},
             "messageHandlers": {},
-            "title": "jugement_messages",
-            "width": "m"
+            "title": "jugement_prev_messages"
           }
         },
+        {
+          "type": "lab.flow.Loop",
+          "templateParameters": [
+            {
+              "messages": "Dans les jeux d'argent et de hasard, le hasard est toujours présent. Ne surestimez pas votre expertise.",
+              "": ""
+            },
+            {
+              "messages": "Famille, vie sociale, santé financière, êtes-vous prêt à tout miser ? Pour être aidé, appelez le 09-74-75-13-13 (appel non surtaxé).",
+              "": ""
+            },
+            {
+              "messages": "Fixez-vous des limites. Ne tentez pas de rejouer l'argent que vous venez de perdre.",
+              "": ""
+            },
+            {
+              "messages": "Jouer comporte des risques : endettement, isolement, dépendance. Pour être aidé, appelez le 09-74-75-13-13 (appel non surtaxé).",
+              "": ""
+            },
+            {
+              "messages": "Les jeux d'argent et de hasard peuvent être dangereux : pertes d'argent, conflits familiaux, addiction… Retrouvez nos conseils sur joueurs-info-service.fr (09 74 75 13 13 - appel non surtaxé).",
+              "": ""
+            },
+            {
+              "messages": "Méfiez-vous des croyances erronées. On ne peut pas gagner sa vie avec les jeux d'argent et de hasard.",
+              "": ""
+            },
+            {
+              "messages": "Plus vous jouez à des jeux d'argent et de hasard, plus vous vous isolez de votre entourage.",
+              "": ""
+            },
+            {
+              "messages": "N’oubliez pas que c’est uniquement du hasard.",
+              "": ""
+            },
+            {
+              "messages": "Souvenez-vous que c’est un jeu de hasard.",
+              "": ""
+            },
+            {
+              "messages": "N’oubliez-pas que le hasard ne se maîtrise pas.",
+              "": ""
+            },
+            {
+              "messages": "Aucune stratégie ne permet de lutter contre le hasard.",
+              "": ""
+            },
+            {
+              "messages": "Vous ne maîtrisez rien dans le jeu de hasard.",
+              "": ""
+            },
+            {
+              "messages": "Ce jeu est soumis uniquement au hasard.",
+              "": ""
+            },
+            {
+              "messages": "Le hasard est le seul facteur déterminant de ce jeu.",
+              "": ""
+            },
+            {
+              "messages": "Le jeu peut rendre dépendant.",
+              "": ""
+            },
+            {
+              "messages": "Pour que le jeu reste un plaisir.",
+              "": ""
+            },
+            {
+              "messages": "Garde le contrôle sur ton jeu !",
+              "": ""
+            },
+            {
+              "messages": "Fixez-vous des limites de jeu pour garder le contrôle.",
+              "": ""
+            },
+            {
+              "messages": "Pour bien jouer, il faut parfois moins jouer.",
+              "": ""
+            },
+            {
+              "messages": "Jouez malin, jouez avec modération.",
+              "": ""
+            },
+            {
+              "messages": "Reprendre le contrôle pour que le jeu reste un plaisir.",
+              "": ""
+            },
+            {
+              "messages": "Restez maître du jeu ! Fixez vos limites.",
+              "": ""
+            }
+          ],
+          "sample": {
+            "mode": "draw-shuffle"
+          },
+          "files": {},
+          "responses": {
+            "": ""
+          },
+          "parameters": {},
+          "messageHandlers": {},
+          "title": "jugement_prom",
+          "tardy": true,
+          "indexParameter": "count_message",
+          "skip": "${this.state.contrebal_set != 'prom'}",
+          "shuffleGroups": [],
+          "template": {
+            "type": "lab.html.Page",
+            "items": [
+              {
+                "required": true,
+                "type": "html",
+                "content": "\u003Cp align=\"right\" style=\"color:grey\"\u003E\u003Ci\u003EMessage : ${this.parameters.count_message+1}\u002F22\u003C\u002Fi\u003E\u003C\u002Fp\u003E\u003Cbr\u003E\r\n\r\n\u003Cdiv style=\"font-size: 1.5vw;width:100%\"\u003E\r\n\u003C\u002Fdiv\u003E\r\n\r\n \u003Ccenter\u003E\u003CFONT size =\"5\"\u003E${ parameters.messages }\u003C\u002FFONT\u003E\u003C\u002Fcenter\u003E\u003Cbr\u003E\u003Chr\u003E\u003Cbr\u003E\r\n \u003Ch3\u003ESelon vous, à quel point ce message est-il promotionnel ?\u003C\u002Fh3\u003E\r\n\u003Cbr\u003E\u003Cbr\u003E\r\n\r\n\u003Cstyle\u003E\r\nhtml,body {padding:0;margin:0;}\r\n.wrap {\r\n}\r\nform .statement {\r\n  display:block;\r\n  font-size: 1.5rem;\r\n  padding: 20px 0 0 4.25%;\r\n  margin-bottom:10px;\r\n}\r\nform .likert {\r\n  list-style:none;\r\n  width:100%;\r\n  margin:0;\r\n  padding:0 0 0;\r\n  display:block;\r\n  border-bottom:2px solid #efefef;\r\n}\r\nform .likert:before {\r\n  content: '';\r\n  position:relative;\r\n  top:11px;\r\n  display:block;\r\n  background-color:#efefef;\r\n  height:0px;\r\n  width:80%;\r\n}\r\nform .likert li {\r\n  display:inline-block;\r\n  width:15%;\r\n  text-align:center;\r\n  vertical-align: top;\r\n}\r\nform .likert li input[type=radio] {\r\n  display:block;\r\n  position:relative;\r\n  top:0;\r\n  left:50%;\r\n  margin-left:-4px;\r\n}\r\n\u003C\u002Fstyle\u003E\r\n\u003Cdiv class=\"wrap\"\u003E\r\n  \u003Ccenter\u003E\r\n  \u003Cform action=\"\"\u003E\r\n    \u003Cul class='likert'\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"1\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003EPas du tout promotionnel\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"2\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003E\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"3\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n      \u003C\u002Fli\u003E\r\n      \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"4\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003E\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n            \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"5\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003E\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n            \u003Cli\u003E\r\n        \u003Cinput type=\"radio\" name=\"jugement_promotion\" value=\"6\" onclick=\"document.getElementById('continue_button').style.visibility='visible';\"\u003E\r\n        \u003Clabel\u003ETout à fait promotionnel\u003C\u002Flabel\u003E\r\n      \u003C\u002Fli\u003E\r\n    \u003C\u002Ful\u003E\r\n  \u003C\u002Fform\u003E\r\n  \u003C\u002Fcenter\u003E\r\n\u003C\u002Fdiv\u003E\r\n\u003Cbr\u003E\r\n\r\n\u003Ccenter\u003E\r\n  \u003Cdiv id=\"continue_button\" style=\"visibility:hidden;\"\u003E\u003Cbutton type=\"submit\" \u003Esuivant\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\r\n\u003C\u002Fcenter\u003E",
+                "name": ""
+              }
+            ],
+            "scrollTop": true,
+            "submitButtonText": "Continue →",
+            "submitButtonPosition": "hidden",
+            "files": {},
+            "responses": {
+              "": ""
+            },
+            "parameters": {},
+            "messageHandlers": {},
+            "title": "jugement_prom_messages"
+          }
+        }
+      ],
+      "skip": "${this.state.consent!= 1}"
+    },
+    {
+      "type": "lab.flow.Sequence",
+      "files": {},
+      "responses": {
+        "": ""
+      },
+      "parameters": {},
+      "messageHandlers": {},
+      "title": "Sequence_socio_demo",
+      "content": [
         {
           "type": "lab.html.Page",
           "items": [
@@ -262,7 +408,7 @@ const study = lab.util.fromObject({
           },
           "parameters": {},
           "messageHandlers": {},
-          "title": "Questionnaire socio démographique "
+          "title": "socio demographique "
         },
         {
           "type": "lab.html.Page",
@@ -317,16 +463,18 @@ const study = lab.util.fromObject({
               "name": ""
             }
           ]
-        },
-        {
-          "type": "lab.html.Screen",
-          "files": {},
-          "responses": {
-            "keypress(Space)": "end_study"
-          },
-          "parameters": {},
-          "messageHandlers": {
-            "before:prepare": function anonymous(
+        }
+      ]
+    },
+    {
+      "type": "lab.html.Screen",
+      "files": {},
+      "responses": {
+        "keypress(Space)": "end_study"
+      },
+      "parameters": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
 ) {
 function randomID(){
   const length = 10;
@@ -355,13 +503,10 @@ fetch("https://pipe.jspsych.org/api/data/", {
   }),
 });
 }
-          },
-          "title": "end_study_redirect",
-          "content": " \u003Cmain class=\"content-vertical-center\r\n             content-horizontal-center\"\u003E\r\n \u003Cdiv style=\"font-size: 1.2vw; width: 70%;\"\u003E  \r\n\u003Cp style=\"text-align: justify;\"\u003EDernière question\u003C\u002Fp\u003E\r\n\r\n\u003Cp style=\"text-align: justify;\"\u003EVous avez terminé le questionnaire. L'entièreté de cette étude est anonyme et aucune des données recueillies ne permet de vous identifier. \u003C\u002Fp\u003E\r\n  \r\n\r\n \u003C\u002Fdiv\u003E\r\n  \u003C\u002Fmain\u003E",
-          "tardy": true
-        }
-      ],
-      "skip": "${this.state.consent!= 1}"
+      },
+      "title": "end_study_redirect",
+      "content": " \u003Cmain class=\"content-vertical-center\r\n             content-horizontal-center\"\u003E\r\n \u003Cdiv style=\"font-size: 1.2vw; width: 70%;\"\u003E  \r\n\u003Cp style=\"text-align: justify;\"\u003EDernière question\u003C\u002Fp\u003E\r\n\r\n\u003Cp style=\"text-align: justify;\"\u003EVous avez terminé le questionnaire. L'entièreté de cette étude est anonyme et aucune des données recueillies ne permet de vous identifier. \u003C\u002Fp\u003E\r\n      \r\n\u003Cp style=\"text-align: justify;\"\u003ESi vous avez des questions et\u002Fou souhaitez en savoir plus sur cette étude, veuillez contacter la personne en charge de ce projet : valerie.le-floch@univ-tlse2.fr\u003C\u002Fp\u003E\r\n\r\n \u003C\u002Fdiv\u003E\r\n  \u003C\u002Fmain\u003E",
+      "tardy": true
     }
   ]
 })
