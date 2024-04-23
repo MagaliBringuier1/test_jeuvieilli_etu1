@@ -16,7 +16,7 @@ const study = lab.util.fromObject({
   ],
   "metadata": {
     "title": "Évaluation de messages de préventions",
-    "description": "les deux échelles (prévention et promotion) sont présentées, mais l'ordre de présentation de ces échelles est randomisé par participant.  ",
+    "description": "rajouter cer",
     "repository": "",
     "contributors": "Magali Bringuier \u003Cmagali.bringuier@univ-tlse2.fr\u003E"
   },
@@ -107,7 +107,7 @@ this.parameters.contrebal_set = this.random.choice(['prev_puis_prom', 'prom_puis
                 {
                   "type": "text",
                   "title": "Consignes",
-                  "content": "\u003Cp\u003EDans cette étude, vous allez voir un ensemble de messages concernant les jeux de hasard et d'argent. Ces messages seront affichés individuellement.\u003C\u002Fp\u003E\n\n\u003Cp\u003EPour chaque message, vous devrez tout d'abord indiquer à quel point vous le trouvez \u003Cb\u003Epréventif\u003C\u002Fb\u003E, c'est-à-dire à quel point le message présenté vous dissuade de jouer à des jeux de hasard et d'argent.\u003C\u002Fp\u003E\n\n\u003Cp\u003EVous devrez ensuite indiquer à quel point vous le trouvez \u003Cb\u003Epromotionnel\u003C\u002Fb\u003E, c'est-à-dire à quel point il vous incite à jouer.\u003C\u002Fp\u003E\n\n\u003Cp\u003EUne fois vos deux réponses données sur un message, vous pourrez appuyer sur \"Suivant\" pour passer au message suivant.\u003C\u002Fp\u003E\n\n\u003Cp\u003EAssurez-vous d'avoir bien compris ces consignes, et commencez la tâche en cliquant sur \"Commencer la tâche\".\u003C\u002Fp\u003E"
+                  "content": "\u003Cp\u003EDans cette étude, vous allez voir un ensemble de messages concernant les jeux de hasard et d'argent. Ces messages seront affichés individuellement.\u003C\u002Fp\u003E\n\n\u003Cp\u003EPour chaque message, vous devrez tout d'abord indiquer à quel point vous le trouvez \u003Cb\u003Epréventif\u003C\u002Fb\u003E, c'est-à-dire à quel point le message présenté vous dissuade de jouer à des jeux de hasard et d'argent.\u003C\u002Fp\u003E\n\n\u003Cp\u003EVous devrez ensuite indiquer à quel point vous le trouvez \u003Cb\u003Epromotionnel\u003C\u002Fb\u003E, c'est-à-dire à quel point il vous incite à jouer à des jeux de hasard et d'argent.\u003C\u002Fp\u003E\n\n\u003Cp\u003EUne fois vos deux réponses données sur un message, vous pourrez appuyer sur \"Suivant\" pour passer au message suivant.\u003C\u002Fp\u003E\n\n\u003Cp\u003EAssurez-vous d'avoir bien compris ces consignes, et commencez la tâche en cliquant sur \"Commencer la tâche\".\u003C\u002Fp\u003E"
                 },
                 {
                   "required": true,
@@ -506,6 +506,60 @@ this.parameters.contrebal_set = this.random.choice(['prev_puis_prom', 'prom_puis
           ]
         },
         {
+          "type": "lab.html.Page",
+          "scrollTop": true,
+          "submitButtonText": "\u003Cspan\u003EPour continuer, cliquer ici\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E",
+          "submitButtonPosition": "hidden",
+          "files": {},
+          "responses": {
+            "": ""
+          },
+          "parameters": {},
+          "messageHandlers": {},
+          "title": "CSP",
+          "width": "m",
+          "items": [
+            {
+              "type": "text",
+              "title": "À quelle catégorie socio-prefessionnelle appartenez-vous ?",
+              "content": "Si vous appartenez à deux catégories (par exemple étudiant.e salarié.e) veuillez indiquer la catégorie socio-professionnelle qui vous semble centrale dans votre activité. "
+            },
+            {
+              "required": true,
+              "type": "html",
+              "content": "\u003Cbr\u003E\r\n\r\n\u003Cform\u003E\r\n  \u003Cinput type=\"radio\" id=\"agriculteur\" name=\"CSP\" value=\"1\" required\u003E\r\n  \u003Clabel for=\"agriculteur\"\u003EAgriculteurs exploitants\u003C\u002Flabel\u003E\u003Cbr\u003E\r\n\r\n  \u003Cinput type=\"radio\" id=\"artisan\" name=\"CSP\" value=\"2\" required\u003E\r\n  \u003Clabel for=\"artisan\"\u003EArtisans, commerçants, cheffes d'entreprise\u003C\u002Flabel\u003E\u003Cbr\u003E\r\n\r\n  \u003Cinput type=\"radio\" id=\"cadre\" name=\"CSP\" value=\"3\"\u003E\r\n  \u003Clabel for=\"cadre\"\u003ECadres et professions intellectuelles supérieures\u003C\u002Flabel\u003E\u003Cbr\u003E\r\n\r\n  \u003Cinput type=\"radio\" id=\"profession_intermediaire\" name=\"CSP\" value=\"4\"\u003E\r\n  \u003Clabel for=\"profession_intermediaire\"\u003EProfessions intermédiaires\u003C\u002Flabel\u003E\u003Cbr\u003E\r\n  \r\n  \u003Cinput type=\"radio\" id=\"employe\" name=\"CSP\" value=\"5\"\u003E\r\n  \u003Clabel for=\"employe\"\u003EEmployés\u003C\u002Flabel\u003E\u003Cbr\u003E\r\n\r\n  \u003Cinput type=\"radio\" id=\"ouvrier\" name=\"CSP\" value=\"6\"\u003E\r\n  \u003Clabel for=\"ouvrier\"\u003EOuvriers\u003C\u002Flabel\u003E\u003Cbr\u003E\r\n\r\n  \u003Cinput type=\"radio\" id=\"retraite\" name=\"CSP\" value=\"7\"\u003E\r\n  \u003Clabel for=\"retraite\"\u003ERetraités\u003C\u002Flabel\u003E\u003Cbr\u003E   \r\n  \r\n  \u003Cinput type=\"radio\" id=\"etudiant\" name=\"CSP\" value=\"8\"\u003E\r\n  \u003Clabel for=\"etudiant\"\u003EÉtudiants\u003C\u002Flabel\u003E\u003Cbr\u003E\r\n\r\n  \u003Cinput type=\"radio\" id=\"autre_sans_act\" name=\"CSP\" value=\"9\"\u003E\r\n  \u003Clabel for=\"autre_sans_act\"\u003EAutres personnes sans activité professionnelle\u003C\u002Flabel\u003E\u003Cbr\u003E\u003Cbr\u003E\r\n  \r\n\u003C\u002Fform\u003E\r\n\r\n\u003Cbr\u003E\u003Cbr\u003E\r\n\u003Ccenter\u003E\r\n  \u003Cdiv\u003E\u003Cbutton\u003EContinuer →\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\r\n\u003C\u002Fcenter\u003E\r\n",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "type": "lab.html.Page",
+          "scrollTop": true,
+          "submitButtonText": "\u003Cspan\u003EPour continuer, cliquer ici\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E",
+          "submitButtonPosition": "hidden",
+          "files": {},
+          "responses": {
+            "": ""
+          },
+          "parameters": {},
+          "messageHandlers": {},
+          "title": "habit_jeu",
+          "width": "m",
+          "items": [
+            {
+              "type": "text",
+              "title": "À quel fréquence jouez-vous aux jeux de hasard et d'argent ?",
+              "content": "Pour information, les jeux de hasard et d'argent englobent une variété d'activités telles que l'achat de billets de loterie, l'utilisation de machines à sous, la participation au loto, le grattage de billets, les jeux de roulette, les paris sportifs, l'utilisation d'appareils de loterie électronique, ainsi que les jeux de cartes comme le poker ou le blackjack."
+            },
+            {
+              "required": true,
+              "type": "html",
+              "content": "\u003Cbr\u003E\r\n\r\n\u003Cform\u003E\r\n  \u003Cinput type=\"radio\" id=\"jamais\" name=\"habit_jeu\" value=\"1\" required\u003E\r\n  \u003Clabel for=\"jamais\"\u003Ejamais\u003C\u002Flabel\u003E\u003Cbr\u003E\r\n\r\n  \u003Cinput type=\"radio\" id=\"1_par_an\" name=\"habit_jeu\" value=\"2\" required\u003E\r\n  \u003Clabel for=\"1_par_an\"\u003Eune fois par an\u003C\u002Flabel\u003E\u003Cbr\u003E\r\n\r\n  \u003Cinput type=\"radio\" id=\"1_par_moi\" name=\"habit_jeu\" value=\"3\"\u003E\r\n  \u003Clabel for=\"1_par_moi\"\u003Eune fois par moi\u003C\u002Flabel\u003E\u003Cbr\u003E\r\n\r\n  \u003Cinput type=\"radio\" id=\"1_par_semaine\" name=\"habit_jeu\" value=\"3\"\u003E\r\n  \u003Clabel for=\"1_par_semaine\"\u003Eune fois par semaine\u003C\u002Flabel\u003E\u003Cbr\u003E\r\n  \r\n  \u003Cinput type=\"radio\" id=\"1_par_jour\" name=\"habit_jeu\" value=\"3\"\u003E\r\n  \u003Clabel for=\"1_par_jour\"\u003Eune fois par jour\u003C\u002Flabel\u003E\u003Cbr\u003E\u003Cbr\u003E\r\n  \r\n\r\n\u003C\u002Fform\u003E\r\n\r\n\u003Cbr\u003E\u003Cbr\u003E\r\n\u003Ccenter\u003E\r\n  \u003Cdiv\u003E\u003Cbutton\u003EContinuer →\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\r\n\u003C\u002Fcenter\u003E\r\n",
+              "name": ""
+            }
+          ]
+        },
+        {
           "type": "lab.html.Screen",
           "files": {},
           "responses": {
@@ -544,7 +598,7 @@ fetch("https://pipe.jspsych.org/api/data/", {
 }
           },
           "title": "end_study_redirect",
-          "content": " \u003Cmain class=\"content-vertical-center\r\n             content-horizontal-center\"\u003E\r\n \u003Cdiv style=\"font-size: 1.2vw; width: 70%;\"\u003E  \r\n\u003Cp style=\"text-align: justify;\"\u003EDernière question\u003C\u002Fp\u003E\r\n\r\n\u003Cp style=\"text-align: justify;\"\u003EVous avez terminé le questionnaire. L'entièreté de cette étude est anonyme et aucune des données recueillies ne permet de vous identifier. \u003C\u002Fp\u003E\r\n  \r\n\r\n \u003C\u002Fdiv\u003E\r\n  \u003C\u002Fmain\u003E",
+          "content": " \u003Cmain class=\"content-vertical-center\r\n             content-horizontal-center\"\u003E\r\n \u003Cdiv style=\"font-size: 1.2vw; width: 70%;\"\u003E  \r\n\r\n\u003Cp style=\"text-align: justify;\"\u003EVous avez terminé le questionnaire. L'entièreté de cette étude est anonyme et aucune des données recueillies ne permet de vous identifier. \u003C\u002Fp\u003E\r\n\r\n\u003Cp style=\"text-align: justify;\"\u003ENous vous remercions de votre participation.\u003C\u002Fp\u003E\r\n\u003Cp style=\"text-align: justify;\"\u003EAvec cette étude, nous souhaitons évaluer le caractère préventif et promotionel de messages utilisés dans le cadre des mesures mise en oeuvres pour lutter contre les pratiques excessives dans les jeux de hasard et d'argent. Pour toutes questions relatives à cette étude, veuillez prendre contact avec la responsable de projet, Mme Valérie Le Floch, professeure des universités et disponible à l'adresse suivante : valerie.le-floch@univ-tlse2.fr\u003C\u002Fp\u003E\r\n\r\n\u003Cp style=\"text-align: justify;\"\u003E Vous pouvez fermer cette page.\u003C\u002Fp\u003E\r\n \u003C\u002Fdiv\u003E\r\n  \u003C\u002Fmain\u003E",
           "tardy": true
         }
       ],
